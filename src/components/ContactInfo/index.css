@@ -1,0 +1,22 @@
+body{
+  width: available;
+  height: available;
+}
+
+.container{
+  width: available;
+  height: available;
+}
+
+.contactInfo {
+  cursor: pointer;
+  font-weight: bold !important;
+  width: 35%;
+  min-width: 350px;
+  border-collapse: collapse;
+}
+
+img.largeImage {
+  width: 400px !important;
+  height: 400px !important;   
+}
