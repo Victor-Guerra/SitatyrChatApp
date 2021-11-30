@@ -32,7 +32,7 @@ const imageStyle = {
 };
 
 /**
- * Contact elements
+ * Contact Modal elements
  * @param props 
  * @returns ContactModal UI elements
  */

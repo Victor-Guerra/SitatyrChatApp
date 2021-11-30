@@ -1,7 +1,7 @@
 import ContactsAPI from "./ContactsAPI";
 
 /**
- * Contact Service class to handle post API requests
+ * Contacts Service class to handle post API requests
  */
 class ContactsService {
   /**

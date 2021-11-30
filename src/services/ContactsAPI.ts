@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 /**
- * Contact API values for baseURL and responseType
+ * Contacts API values for baseURL and responseType
  */
 const ContactAPI = axios.create({
     //baseURL: 'https://jsonplaceholder.typicode.com/',

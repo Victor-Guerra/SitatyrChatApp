@@ -12,7 +12,7 @@ interface ContactProps {
 }
 
 /**
- * Contact Info Container
+ * Contacts List Container
  * @extends {Component<Props,ListState>}
  */
 class ContactsList extends React.Component<ContactProps, {}, ListState> {
