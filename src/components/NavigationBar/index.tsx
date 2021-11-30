@@ -15,12 +15,12 @@ const NavigationBar = () => {
             <AppBar position="static" className="navbar">
                 <Toolbar variant="dense">
                     <Box display='flex' flexGrow={1}>
-                        <Link className="login-link" to="/">
+                        <Link className="login-link" to="/chat">
                             <Typography variant="h6" color="inherit" component="div">
                                 Chats activos
                             </Typography>
                         </Link>
-                        <Link className="login-link" to="/">
+                        <Link className="login-link" to="/chat">
                             <IconButton>
                                 <Chat/>
                             </IconButton>
