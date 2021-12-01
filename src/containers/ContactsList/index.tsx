@@ -33,7 +33,7 @@ class ContactsList extends React.Component<ContactProps, {}, ListState> {
       );
     });
     return (
-      <Grid container>
+      <Grid container style={{ marginTop: 5}}>
         <Grid item container xs={12} md={4}>
           {contactsList}
         </Grid>

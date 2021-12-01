@@ -36,8 +36,8 @@ const ContactInfo: React.FC<ContactProps> = (props) => {
   }
 
   return (
-    <div id={contactId} className="contactInfo" onClick={props.handleClickContact}>
-      <Grid container className="contactGrid" alignItems="center" spacing={2}>
+    <div id={contactId} className="contactInfo" >
+      <Grid container className="contactGrid" alignItems="center" spacing={2} onClick={props.handleClickContact} >
         <Grid
           item
           lg={3}

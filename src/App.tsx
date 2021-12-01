@@ -33,7 +33,7 @@ class App extends React.Component<{}, AppState> {
         <BrowserRouter>
           <Header />
           <Routes openContact={this.handleOpenContact} />
-          {/* <ContactView isContactVisible={this.state.contactOpen} closeContact={this.handleCloseContact} contact={this.state.contact}/> */}
+          <ContactView isContactVisible={this.state.contactOpen} closeContact={this.handleCloseContact} contact={this.state.contact}/>
         </BrowserRouter>
       </React.Fragment>
     );
