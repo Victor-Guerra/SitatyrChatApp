@@ -11,12 +11,14 @@ body{
 .contactInfo {
   cursor: pointer;
   font-weight: bold !important;
-  width: 35%;
+  width: 100%;
+  padding-bottom: 5px;
+  padding-top: 10px;
   min-width: 350px;
   border-collapse: collapse;
 }
 
 img.largeImage {
-  width: 400px !important;
-  height: 400px !important;   
+  width: 350px !important;
+  height: 350px !important;   
 }

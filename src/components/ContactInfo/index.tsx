@@ -8,8 +8,8 @@ interface ContactProps {
 }
 
 const style = {
-    width: 75,
-    height: 75,
+    width: 70,
+    height: 70,
     margin: 'auto',
     display: 'block',
     maxWidth: '100%',
@@ -35,16 +35,15 @@ const ContactInfo: React.FC<ContactProps> = (props) => {
 
     return (
         <div className="contactInfo" onClick={props.handleClickContact}>
-            
-            <Grid container className="contactGrid">
-                <Grid lg={2} sm={2} container spacing={0} direction="column" alignItems="center" justifyContent="center">
+            <Grid container alignItems="center" spacing={2}>
+                <Grid item lg={3} sm={3} container spacing={0} direction="column" alignItems="center" justifyContent="center">
                     <Grid item>
                         <Box sx={style}>
-                            <img src={contactImage} alt={contactName} width="75" height="75" />
+                            <img src={contactImage} alt={contactName} width="100%" height="100%" />
                         </Box>
                     </Grid>
                 </Grid>
-                <Grid lg={10} sm={10} spacing={2} className="contactInfo" alignItems="center" justifyContent="center">
+                <Grid item lg={9} sm={9} spacing={2} alignItems="center" justifyContent="center">
                     <Grid item lg={12} sm={12} alignItems="center" justifyContent="center">
                         <Typography className="contactName" variant="h4" >
                             {contactName}
@@ -52,11 +51,7 @@ const ContactInfo: React.FC<ContactProps> = (props) => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item lg={12} sm={12}/>
-            <Grid item lg={12} sm={12}/>
-            <Grid item lg={12} sm={12}/>
-            <Grid item lg={12} sm={12}/>
-            <Divider/>
+            <Divider style={{ marginTop: "10px"}}/>
         </div>
     );
 }

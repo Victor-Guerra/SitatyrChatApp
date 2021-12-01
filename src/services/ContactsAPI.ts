@@ -4,7 +4,7 @@ import axios from 'axios';
  * Contacts API values for baseURL and responseType
  */
 const ContactAPI = axios.create({
-    //baseURL: 'https://jsonplaceholder.typicode.com/',
+    //baseURL: 'https://sitatyr-chat-app-be.herokuapp.com/',
     //responseType: 'json'
 });
 
