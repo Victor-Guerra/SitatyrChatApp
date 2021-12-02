@@ -18,8 +18,8 @@ interface RoutesProps {
 const Routes: React.FC<RoutesProps> = (props) => {
   return (
     <Switch>
-      <Route exact path="/">
-        <LoginModalContainer />
+      <Route path="/login">
+        <LoginModalContainer/>
       </Route>
       <Route path="/chat">
         <ChatView activeChats={props.activeChats} />
