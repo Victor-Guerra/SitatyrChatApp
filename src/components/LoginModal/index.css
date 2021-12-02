@@ -1,0 +1,77 @@
+.loginText{
+    font-weight: bold !important;
+   margin-bottom: 2rem !important;
+   font-family: 'Courier New', Courier, monospace !important;
+}
+
+.imgPos{
+    margin-right: -10rem !important;
+}
+
+.titleGrid{
+    border-bottom-style:dashed !important;
+}
+
+.nameGrid{
+    padding-top: 3rem !important ;
+    margin-right: 80px !important;
+}
+
+.passwordLabel{
+    font-weight: bold !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 20px !important;
+    
+}
+
+
+.nameLabel{
+    font-weight: bolder !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 20px !important;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color:  #f41e1e !important;;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: bold !important;
+}
+
+.button span {
+  cursor:pointer;
+  transition: 0.5s;
+}
+
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  bottom: 6px;
+  left: 70px;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  left: -200;
+}
+  
+
+ 

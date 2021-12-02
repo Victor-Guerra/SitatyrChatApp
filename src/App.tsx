@@ -5,30 +5,23 @@ import { BrowserRouter } from 'react-router-dom';
 import Rutas from './components/Rutas';
 import LoginModalContainer from './containers/LoginModal';
 
-/*
-interface AppState {
-  contactOpen: boolean;
-}*/
 
+/**
+ * Header Container
+ * @extends {Component<Props>}
+ */
 class App extends React.Component<{},{}> {
-  state = {
-    contactOpen: false
-  }
-
+  
   render() {
     return (
       <React.Fragment>
-        <CssBaseline />
-        <LoginModalContainer />
+        <CssBaseline/>
+        <BrowserRouter>
+        <Rutas/>
+        </BrowserRouter> 
       </React.Fragment>
     );
   }
-/*
-  handleOpenContact = (event: any) => {
-    this.setState({ contactOpen: true })
-  }*/
-  /*
-  */
 }
 
 export default App;
