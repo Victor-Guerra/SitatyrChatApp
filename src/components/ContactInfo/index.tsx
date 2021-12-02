@@ -28,11 +28,9 @@ const style = {
 const ContactInfo: React.FC<ContactProps> = (props) => {
   var contactName = "";
   var contactImage = "";
-  let contactId = "";
   if (props.contact !== undefined && props.contact.id !== undefined) {
     contactName = props.contact.name;
     contactImage = props.contact.userImage;
-    contactId = props.contact.id;
   }
 
   return (

@@ -11,7 +11,7 @@ interface ListState {
   contacts: Contact[];
   messages: Message[];
   activeChatContact: Contact;
-  isChatActive: Boolean;
+  isChatActive: boolean;
   userId: string;
 }
 
@@ -88,7 +88,7 @@ export default class ChatView extends Component<ChatProps, ListState> {
 
     let activeChatContact: any[] = [];
     activeChatContact = this.props.activeChats.filter((con) => {
-      return con.id == indContact.id;
+      return con.id === indContact.id;
     });
 
     this.setState({

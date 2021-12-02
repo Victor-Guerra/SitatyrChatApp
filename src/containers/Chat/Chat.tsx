@@ -1,5 +1,5 @@
 import "./Chat.css";
-import { Box, Button, Grid, TextField } from "@material-ui/core";
+import { Button, Grid, TextField } from "@material-ui/core";
 import React, { Component } from "react";
 import Contact from "../../types/Contact";
 import Message from "../../types/Message";

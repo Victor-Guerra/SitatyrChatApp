@@ -1,7 +1,6 @@
 import "./MessageBox.css";
-import { Box, Container, Grid, Paper, Typography } from "@material-ui/core";
+import { Box, Grid, Typography } from "@material-ui/core";
 import React from "react";
-import Contact from "../../types/Contact";
 import Message from "../../types/Message";
 
 interface MessageProps {
