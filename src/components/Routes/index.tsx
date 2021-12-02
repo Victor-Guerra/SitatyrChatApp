@@ -3,10 +3,12 @@ import LoginModalContainer from "../../containers/LoginModal";
 import ContactsList from "../../containers/ContactsList";
 import MainPage from "../../containers/LoginModal/MainPage";
 import ChatView from "../../containers/ChatView/ChatView";
+import Contact from "../../types/Contact";
 
 interface RoutesProps {
   openContact(event: any): void;
   userId: number;
+  activeChats: Contact[]
 }
 
 /**
@@ -26,7 +28,7 @@ const Routes: React.FC<RoutesProps> = (props) => {
         <ContactsList openContact={props.openContact} />
       </Route>
       <Route path="/chat">
-        <ChatView />
+        <ChatView activeChats={props.activeChats} />
       </Route>
     </Switch>
   );

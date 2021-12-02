@@ -30,7 +30,6 @@ export default class Chat extends Component<ChatProps, ChatState> {
       <Grid
         className="mainGrid"
         container
-        // direction="column"
         justifyContent="space-between"
         alignItems="stretch"
         alignContent="stretch"

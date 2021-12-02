@@ -8,6 +8,7 @@ interface ContactProps {
     handleClose(event: any): void;
     open: boolean;
     contact: Contact;
+    addNewChat(chat: Contact): void;
 }
 
 const style = {
@@ -60,6 +61,7 @@ const imageStyle = {
     }
 
     const handleStartChat = (e: any) => {
+        props.addNewChat(props.contact);
         props.handleClose(e)
         history.push("/chat");
     }

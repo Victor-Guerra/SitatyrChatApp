@@ -11,6 +11,7 @@ interface AppState {
   contactOpen: boolean;
   contact: Contact;
   userId: number;
+  activeChats: Contact[];
 }
 
 /**
@@ -22,6 +23,7 @@ class App extends React.Component<{}, AppState> {
     contactOpen: false,
     contact: {} as any,
     userId: 0,
+    activeChats: [] as Contact[],
   };
 
   /**
@@ -33,9 +35,18 @@ class App extends React.Component<{}, AppState> {
       <React.Fragment>
         <CssBaseline />
         <BrowserRouter>
-          <Header/>
-          <Routes openContact={this.handleOpenContact} userId={this.state.userId}/>
-          <ContactView isContactVisible={this.state.contactOpen} closeContact={this.handleCloseContact} contact={this.state.contact}/>
+          <Header />
+          <Routes
+            openContact={this.handleOpenContact}
+            userId={this.state.userId}
+            activeChats={this.state.activeChats}
+          />
+          <ContactView
+            isContactVisible={this.state.contactOpen}
+            closeContact={this.handleCloseContact}
+            contact={this.state.contact}
+            addNewChat={this.addNewChat}
+          />
         </BrowserRouter>
       </React.Fragment>
     );
@@ -58,6 +69,13 @@ class App extends React.Component<{}, AppState> {
    */
   handleOpenContact = (event: any) => {
     this.setState({ contact: event, contactOpen: true });
+  };
+
+  addNewChat = (chat: Contact) => {
+    let activeChats = this.state.activeChats;
+    activeChats.push(chat);
+
+    this.setState({ activeChats });
   };
 }
 

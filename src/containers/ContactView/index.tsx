@@ -6,6 +6,7 @@ interface ContactProps {
     closeContact(event: any): void;
     isContactVisible: boolean;
     contact: Contact;
+    addNewChat(chat: Contact): void;
 }
 
 /**
@@ -19,7 +20,7 @@ interface ContactProps {
      */
     render() {
         return (
-            <ContactModal handleClose={this.props.closeContact} open={this.props.isContactVisible} contact={this.props.contact}/>
+            <ContactModal handleClose={this.props.closeContact} open={this.props.isContactVisible} contact={this.props.contact} addNewChat={this.props.addNewChat} />
         )
     }
 }

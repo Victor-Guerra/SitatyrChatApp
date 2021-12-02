@@ -51,7 +51,6 @@ const MessageBox: React.FC<MessageProps> = (props) => {
             <Typography>{messageText}</Typography>
           </Grid>
         </Box>
-        {/* <Container > {props.message.messageBody} </Container> */}
       </Grid>
     </Grid>
   );
