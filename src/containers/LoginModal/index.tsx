@@ -81,10 +81,12 @@ class LoginModalContainer extends React.Component<{}, LoginState> {
 
         LogInService.login(this.state.userName, this.state.password)
             .then(response => {
-                const jsonWebToken = response.data;
+                const jsonWebToken = response.data.token;
+                const userId = response.data.id;
                 console.log(jsonWebToken);
                 SessionStorageHelper.updateToken(jsonWebToken.token);
-                window.location.href = "/main";
+                SessionStorageHelper.updateUserId(userId);
+                window.location.href = "/chats";
             }).catch(error => {
                 console.log(error);
 

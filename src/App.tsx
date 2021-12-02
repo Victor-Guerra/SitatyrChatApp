@@ -10,6 +10,7 @@ import ContactView from './containers/ContactView';
 interface AppState {
   contactOpen: boolean;
   contact: Contact;
+  userId: number;
 }
 
 /**
@@ -20,6 +21,7 @@ class App extends React.Component<{}, AppState> {
   state = {
     contactOpen: false,
     contact: {} as any,
+    userId: 0,
   };
 
   /**
@@ -32,7 +34,7 @@ class App extends React.Component<{}, AppState> {
         <CssBaseline/>
         <BrowserRouter>
           <Header/>
-          <Routes openContact={this.handleOpenContact}/>
+          <Routes openContact={this.handleOpenContact} userId={this.state.userId}/>
           <ContactView isContactVisible={this.state.contactOpen} closeContact={this.handleCloseContact} contact={this.state.contact}/>
         </BrowserRouter>
       </React.Fragment>
