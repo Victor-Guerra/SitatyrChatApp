@@ -4,8 +4,6 @@ import React, { Component } from "react";
 import Contact from "../../types/Contact";
 import Message from "../../types/Message";
 import MessageBox from "../../components/Meesage/MessageBox";
-// import SendIcon from '@mui/icons-material/Send';
-
 interface ChatProps {
   contact: Contact;
   user: Contact;
