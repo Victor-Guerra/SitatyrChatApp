@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Modal, Typography } from "@material-ui/core";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import Contact from "../../types/Contact";
 import "./index.css";
 
@@ -7,6 +8,7 @@ interface ContactProps {
     handleClose(event: any): void;
     open: boolean;
     contact: Contact;
+    addNewChat(chat: Contact): void;
 }
 
 const style = {
@@ -37,6 +39,9 @@ const imageStyle = {
  * @returns ContactModal UI elements
  */
  const ContactModal: React.FC<ContactProps> = (props) => {
+
+    const history = useHistory();
+
     var contact_name = "";
     var contact_username = "";
     var contact_userImage = "";
@@ -53,6 +58,12 @@ const imageStyle = {
         contact_age = props.contact.age;
         contact_nationality = props.contact.nationality;
         contact_prefMusic = props.contact.preferredMusic;
+    }
+
+    const handleStartChat = (e: any) => {
+        props.addNewChat(props.contact);
+        props.handleClose(e)
+        history.push("/chat");
     }
 
     return (
@@ -140,7 +151,7 @@ const imageStyle = {
                             <Grid item lg={12} sm={12}/>
                         </Grid>
                         <Grid item lg={4} sm={4}>
-                            <Button className="chatButton" variant="contained">
+                            <Button className="chatButton" variant="contained" onClick={handleStartChat}>
                                 Iniciar chat
                             </Button>
                         </Grid>

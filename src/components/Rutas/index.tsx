@@ -11,7 +11,7 @@ interface RoutesProps{
 const Rutas = () => {
     return (
         <Switch> 
-            <Route exact path = "/"><LoginModalContainer/></Route>
+            <Route path = "/"><LoginModalContainer/></Route>
             <Route path = "/main"><MainPage/></Route>
         </Switch>
     );

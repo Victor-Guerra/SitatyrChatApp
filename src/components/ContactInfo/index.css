@@ -3,6 +3,11 @@ body{
   height: available;
 }
 
+/* .avatar {
+  width: 100px;
+  height: 100px;
+} */
+
 .container{
   width: available;
   height: available;
