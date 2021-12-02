@@ -1,6 +1,6 @@
 import "./index.css";
 import Contact from "../../types/Contact";
-import { Avatar, Box, Divider, Grid, Typography } from "@material-ui/core";
+import { Box, Divider, Grid, Typography } from "@material-ui/core";
 
 interface ContactProps {
   handleClickContact(event: any): void;

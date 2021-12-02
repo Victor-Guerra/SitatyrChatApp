@@ -1,8 +1,9 @@
 import "./Chat.css";
-import { Grid } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 import React, { Component } from "react";
 import Contact from "../../types/Contact";
 import Message from "../../types/Message";
+import MessageBox from "../../components/Meesage/MessageBox";
 
 interface ChatProps {
   contact: Contact;
@@ -19,17 +20,23 @@ export default class Chat extends Component<ChatProps, ChatState> {
   };
 
   render() {
+    let messagesToRender = [] as any[]
+    this.state.messages.forEach((msg) => {
+      messagesToRender.push(<MessageBox message={msg} currentUser={this.props.user} />)
+    })
     return (
       <Grid
         className="mainGrid"
         container
-        direction="column"
+        // direction="column"
         justifyContent="space-between"
+        alignItems="stretch"
+        alignContent="stretch"
       >
-        <Grid item xs={10}>
-          {this.props.contact.name}
+        <Grid className="chatGrid" item xs={12} alignContent="stretch" alignItems="stretch" >
+            {messagesToRender}
         </Grid>
-        <Grid item xs={2}>
+        <Grid className="textFieldGrid" item xs={2}>
           Chat
         </Grid>
       </Grid>
@@ -59,6 +66,20 @@ export default class Chat extends Component<ChatProps, ChatState> {
 
     messages.push(message1);
     messages.push(message2);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
+    messages.push(message3);
     messages.push(message3);
 
     this.setState({ messages });

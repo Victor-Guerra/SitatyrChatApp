@@ -1,0 +1,12 @@
+.messageGrid {
+    padding: 5px 0px 5px 0px;
+}
+
+.messageBox {
+    width: 100%;
+    min-height: 30px;
+}
+
+.rootGrid {
+    width: 100%; 
+}

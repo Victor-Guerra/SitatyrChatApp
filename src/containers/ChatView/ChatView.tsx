@@ -35,7 +35,7 @@ export default class ChatView extends Component<{}, ListState> {
         <Grid item container alignContent="flex-start" xs={12} md={4}>
           {contactsToRender}
         </Grid>
-        <Grid item container xs={12} md={7}>
+        <Grid item container xs={12} md={8}>
           {this.state.isChatActive ? (
             <Chat
               contact={this.state.activeChatContact}
