@@ -3,7 +3,7 @@ import React from "react";
 import ContactInfo from "../../components/ContactInfo";
 import ContactsService from "../../services/ContactsService";
 import Contact from "../../types/Contact";
-import SessionStorageHelper from "../../tools/SessionStorgeHelper";
+import SessionStorageHelper from "../../tools/SessionStorageHelper";
 
 interface ListState {
   contact: Contact[];

@@ -3,8 +3,8 @@ import { Box, Button, Grid, TextField } from "@material-ui/core";
 import React, { Component } from "react";
 import Contact from "../../types/Contact";
 import Message from "../../types/Message";
-import MessageBox from "../../components/Meesage/MessageBox";
-import SessionStorageHelper from "../../tools/SessionStorgeHelper";
+import MessageBox from "../../components/Message/MessageBox";
+import SessionStorageHelper from "../../tools/SessionStorageHelper";
 interface ChatProps {
   contact: Contact;
   userId: string;

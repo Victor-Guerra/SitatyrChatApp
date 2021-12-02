@@ -2,7 +2,7 @@ import React from "react";
 import { RouteComponentProps, withRouter} from "react-router";
 import LoginModal from "../../components/LoginModal";
 import LogInService from "../../services/LogInService";
-import SessionStorageHelper from "../../tools/SessionStorgeHelper";
+import SessionStorageHelper from "../../tools/SessionStorageHelper";
 import {History} from "history";
 import { Redirect } from "react-router-dom";
 
@@ -86,7 +86,7 @@ class LoginModalContainer extends React.Component<{}, LoginState> {
                 console.log(jsonWebToken);
                 SessionStorageHelper.updateToken(jsonWebToken.token);
                 SessionStorageHelper.updateUserId(userId);
-                window.location.href = "/chats";
+                window.location.href = "/chat";
             }).catch(error => {
                 console.log(error);
 

@@ -1,5 +1,5 @@
 import ContactsAPI from "./ContactsAPI";
-import SessionStorageHelper from "../tools/SessionStorgeHelper";
+import SessionStorageHelper from "../tools/SessionStorageHelper";
 
 /**
  * Contacts Service class to handle post API requests

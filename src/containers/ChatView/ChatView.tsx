@@ -2,7 +2,7 @@ import { Grid, Typography } from "@material-ui/core";
 import React, { Component } from "react";
 import ContactInfo from "../../components/ContactInfo";
 import ContactsService from "../../services/ContactsService";
-import SessionStorageHelper from "../../tools/SessionStorgeHelper";
+import SessionStorageHelper from "../../tools/SessionStorageHelper";
 import Contact from "../../types/Contact";
 import Message from "../../types/Message";
 import Chat from "../Chat/Chat";
