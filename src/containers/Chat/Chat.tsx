@@ -1,9 +1,10 @@
 import "./Chat.css";
-import { Box, Grid } from "@material-ui/core";
+import { Box, Button, Grid, TextField } from "@material-ui/core";
 import React, { Component } from "react";
 import Contact from "../../types/Contact";
 import Message from "../../types/Message";
 import MessageBox from "../../components/Meesage/MessageBox";
+// import SendIcon from '@mui/icons-material/Send';
 
 interface ChatProps {
   contact: Contact;
@@ -20,10 +21,12 @@ export default class Chat extends Component<ChatProps, ChatState> {
   };
 
   render() {
-    let messagesToRender = [] as any[]
+    let messagesToRender = [] as any[];
     this.state.messages.forEach((msg) => {
-      messagesToRender.push(<MessageBox message={msg} currentUser={this.props.user} />)
-    })
+      messagesToRender.push(
+        <MessageBox message={msg} currentUser={this.props.user} />
+      );
+    });
     return (
       <Grid
         className="mainGrid"
@@ -33,11 +36,24 @@ export default class Chat extends Component<ChatProps, ChatState> {
         alignItems="stretch"
         alignContent="stretch"
       >
-        <Grid className="chatGrid" item xs={12} alignContent="stretch" alignItems="stretch" >
-            {messagesToRender}
+        <Grid
+          className="chatGrid"
+          item
+          xs={12}
+          alignContent="stretch"
+          alignItems="stretch"
+        >
+          {messagesToRender}
         </Grid>
-        <Grid className="textFieldGrid" item xs={2}>
-          Chat
+        <Grid className="textFieldGrid" container item xs={12} spacing={2} alignItems="center" justifyContent="space-around" >
+          <Grid item xs={9} sm={11}>
+            <TextField variant="outlined" multiline fullWidth />
+          </Grid>
+          <Grid item xs={2} sm={1}>
+            <Button variant="contained" color="primary" >
+              Send
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     );
