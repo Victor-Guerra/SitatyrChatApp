@@ -3,6 +3,7 @@ import React from "react";
 import ContactInfo from "../../components/ContactInfo";
 import ContactsService from "../../services/ContactsService";
 import Contact from "../../types/Contact";
+import SessionStorageHelper from "../../tools/SessionStorgeHelper";
 
 interface ListState {
   contact: Contact[];
@@ -33,7 +34,7 @@ class ContactsList extends React.Component<ContactProps, {}, ListState> {
       );
     });
     return (
-      <Grid container style={{ marginTop: 5}}>
+      <Grid container style={{ marginTop: 5 }}>
         <Grid item container xs={12} md={4}>
           {contactsList}
         </Grid>
@@ -42,49 +43,18 @@ class ContactsList extends React.Component<ContactProps, {}, ListState> {
   }
 
   componentDidMount() {
-    var contacts: Contact[] = [];
-    var contact1: Contact = {
-      id: "1",
-      email: "mhwi@tec.mx",
-      name: "Elder dragon Velkhana",
-      username: "ArchVelkhana",
-      userImage: "https://picsum.photos/100?1",
-      birthday: "2019-10-08",
-      age: 256,
-      nationality: "Asterian",
-      preferredMusic: "Classic",
-      status: "Alive",
-    };
-    var contact2: Contact = {
-      id: "2",
-      email: "mhw@tec.mx",
-      name: "Elder dragon Safijiiva",
-      username: "Safijiiva381",
-      userImage: "https://picsum.photos/100?2",
-      birthday: "2019-12-05",
-      age: 419,
-      nationality: "Asterian",
-      preferredMusic: "Classic",
-      status: "Alive",
-    };
-    contacts.push(contact1);
-    contacts.push(contact2);
-    this.setState({ contacts });
-
     /**
      * Gets all the contacts from the Contact service and sets it into the state.
      */
-    /*
-        ContactsService.getAll(userId)
-            .then((response) => {
-                const contacts: any = response.data;
-                console.log(contacts);
-                this.setState({ contacts });
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-        */
+    ContactsService.getAll(parseInt(SessionStorageHelper.getUserId()))
+      .then((response) => {
+        const contacts: any = response.data;
+        console.log(contacts);
+        this.setState({ contacts });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   /**

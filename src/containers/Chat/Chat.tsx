@@ -4,9 +4,10 @@ import React, { Component } from "react";
 import Contact from "../../types/Contact";
 import Message from "../../types/Message";
 import MessageBox from "../../components/Meesage/MessageBox";
+import SessionStorageHelper from "../../tools/SessionStorgeHelper";
 interface ChatProps {
   contact: Contact;
-  user: Contact;
+  userId: string;
 }
 
 interface ChatState {
@@ -22,7 +23,7 @@ export default class Chat extends Component<ChatProps, ChatState> {
     let messagesToRender = [] as any[];
     this.state.messages.forEach((msg) => {
       messagesToRender.push(
-        <MessageBox message={msg} currentUser={this.props.user} />
+        <MessageBox message={msg} currentUserId ={this.props.userId} />
       );
     });
     return (
@@ -67,7 +68,7 @@ export default class Chat extends Component<ChatProps, ChatState> {
     };
     let message2: Message = {
       id: "2",
-      idSender: "3",
+      idSender: SessionStorageHelper.getUserId(),
       idReceiver: "1",
       messageBody: "YO TE AMO CON TODO MI CORAZON",
     };
@@ -80,20 +81,6 @@ export default class Chat extends Component<ChatProps, ChatState> {
 
     messages.push(message1);
     messages.push(message2);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
-    messages.push(message3);
     messages.push(message3);
 
     this.setState({ messages });

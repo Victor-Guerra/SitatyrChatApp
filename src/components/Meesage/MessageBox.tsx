@@ -6,13 +6,8 @@ import Message from "../../types/Message";
 
 interface MessageProps {
   message: Message;
-  currentUser: Contact;
+  currentUserId: string;
 }
-
-const boxStyles = {
-  borderRadius: "5%",
-  bgcolor: "gray",
-};
 
 const MessageBox: React.FC<MessageProps> = (props) => {
   let senderId = "-1";
@@ -26,9 +21,15 @@ const MessageBox: React.FC<MessageProps> = (props) => {
   }
 
   let currentUserId = "-1";
-  if (props.currentUser.id !== undefined) {
-    currentUserId = props.currentUser.id;
+  if (props.currentUserId !== undefined) {
+    currentUserId = props.currentUserId;
   }
+  console.log(currentUserId)
+
+  const boxStyles = {
+    borderRadius: "5%",
+    bgcolor: senderId === currentUserId ? "rgb(51, 158, 241)" : "gray",
+  };
 
   return (
     <Grid

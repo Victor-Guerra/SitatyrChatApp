@@ -28,16 +28,16 @@ const style = {
 const ContactInfo: React.FC<ContactProps> = (props) => {
   var contactName = "";
   var contactImage = "";
-  let contactId = ""
+  let contactId = "";
   if (props.contact !== undefined && props.contact.id !== undefined) {
     contactName = props.contact.name;
     contactImage = props.contact.userImage;
-    contactId = props.contact.id
+    contactId = props.contact.id;
   }
 
   return (
-    <div id={contactId} className="contactInfo" >
-      <Grid container className="contactGrid" alignItems="center" spacing={2} onClick={props.handleClickContact} >
+    <div className="contactInfo" onClick={props.handleClickContact}>
+      <Grid container alignItems="center" spacing={2}>
         <Grid
           item
           lg={3}

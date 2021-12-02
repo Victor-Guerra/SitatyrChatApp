@@ -10,7 +10,7 @@ interface ContactProps {
 
 /**
  * Contact View Container
- * @extends {Component<Props>}
+ * @extends {Component<Props, {}>}
  */
  class ContactViewContainer extends React.Component<ContactProps, {}> {
     /**
