@@ -42,6 +42,9 @@ class ContactsList extends React.Component<ContactProps, {}, ListState> {
     );
   }
 
+  /**
+   * Runs when the component is mounted
+   */
   componentDidMount() {
     /**
      * Gets all the contacts from the Contact service and sets it into the state.

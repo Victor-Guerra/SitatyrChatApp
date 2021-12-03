@@ -31,6 +31,11 @@ const style = {
     p: 15,
 };
 
+/**
+ * Login Modal elements
+ * @param props The properties necessary for the element to render correctly
+ * @returns login modal ui elements
+ */
 const LoginModal: React.FC<LoginProps> = (props) => {
 
     return (

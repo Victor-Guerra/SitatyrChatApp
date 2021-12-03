@@ -14,11 +14,19 @@ interface ChatState {
   messages: Message[];
 }
 
+/**
+ * Chat Container
+ * @extends {Component<ChatProps, ChatState>}
+ */
 export default class Chat extends Component<ChatProps, ChatState> {
   state = {
     messages: [] as Message[],
   };
 
+  /**
+   * Renders the container
+   * @returns The chat container UI elements
+   */
   render() {
     let messagesToRender = [] as any[];
     this.state.messages.forEach((msg) => {
@@ -57,6 +65,9 @@ export default class Chat extends Component<ChatProps, ChatState> {
     );
   }
 
+  /**
+   * Runs when the component is mounted
+   */
   componentDidMount = () => {
     let messages: Message[] = [];
     let message1: Message = {

@@ -70,6 +70,10 @@ class LoginModalContainer extends React.Component<{}, LoginState> {
         )
     }
 
+    /**
+     * Handle submit
+     * @param event event that triggered the function
+     */
     handleSubmit = (event: any) => {
 
         this.setState({ enableSubmit : false, authenticationFailed : false });
@@ -96,10 +100,18 @@ class LoginModalContainer extends React.Component<{}, LoginState> {
             });
     }
 
+    /**
+     * Handles if password is visible or not
+     * @param event event that triggered the fuction
+     */
     handlePasswordVisible = (event: any) => {
         this.setState({ passwordShow: !this.state.passwordShow });
     }
 
+    /**
+     * Handles the username change
+     * @param event event that triggered the fuction
+     */
     handleUsernameChange = (event: any) => {
         let target = event.currentTarget as HTMLInputElement;
         let value = target.value;
@@ -108,6 +120,10 @@ class LoginModalContainer extends React.Component<{}, LoginState> {
         });
     }
 
+    /**
+     * Handles password changes
+     * @param event event that triggered the fuction
+     */
     handlePasswordChange = (event: any) => {
         let target = event.currentTarget as HTMLInputElement;
         let value = target.value;
@@ -117,14 +133,26 @@ class LoginModalContainer extends React.Component<{}, LoginState> {
     }
 
 
+    /**
+     * Handles closing the login
+     * @param event event that triggered the fuction
+     */
     handleCloseLogin = (event: any) => {
         this.setState({LoginOpen: false })
       }
 
+    
+    /**
+     * Handles closing the modal
+     * @param event event that triggered the fuction
+     */
     handleClose= (event: any) => {
         this.setState({modalOpen : false})
     }
 
+    /**
+     * Validates the values of the form
+     */
     validateForm = () => {
         if (this.state.userName === '' && this.state.userNameModified) {
             this.setState({ userNameInvalid: true, userNameInvalidText: 'Username is required' });

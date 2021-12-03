@@ -52,6 +52,9 @@ class App extends React.Component<{}, AppState> {
     );
   }
 
+  /**
+   * Runs when the component is mounted
+   */
   componentDidMount = () => {
     this.setState({ contact: {} as any });
   };
@@ -71,6 +74,10 @@ class App extends React.Component<{}, AppState> {
     this.setState({ contact: event, contactOpen: true });
   };
 
+  /**
+   * Add a new chat/contact to the active chats
+   * @param chat the new contact to add to the active chats
+   */
   addNewChat = (chat: Contact) => {
     let activeChats = this.state.activeChats;
     activeChats.push(chat);

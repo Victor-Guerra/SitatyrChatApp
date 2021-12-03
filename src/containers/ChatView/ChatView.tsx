@@ -19,6 +19,10 @@ interface ChatProps {
   activeChats: Contact[];
 }
 
+/**
+ * Chat View Container
+ * @extends {Component<ChatProps, ListState>}
+ */
 export default class ChatView extends Component<ChatProps, ListState> {
   state = {
     contacts: [] as Contact[],
@@ -28,6 +32,10 @@ export default class ChatView extends Component<ChatProps, ListState> {
     userId: "0",
   };
 
+  /**
+   * Renders the component
+   * @returns Chat view UI
+   */
   render() {
     let contactsToRender: any[] = [];
     if (this.props.activeChats.length === 0) {
@@ -59,6 +67,9 @@ export default class ChatView extends Component<ChatProps, ListState> {
     );
   }
 
+  /**
+   * Runs when the component is mounted
+   */
   componentDidMount = () => {
     const userId = SessionStorageHelper.getUserId();
 
@@ -76,6 +87,10 @@ export default class ChatView extends Component<ChatProps, ListState> {
       });
   };
 
+  /**
+   * Opens one of the active chats
+   * @param event Event that triggers the function
+   */
   openChat = (event: any) => {
     console.log(event);
     let target = event.currentTarget as HTMLSelectElement;

@@ -8,6 +8,11 @@ interface MessageProps {
   currentUserId: string;
 }
 
+/**
+ * Message box elements
+ * @param props The message and the current user id
+ * @returns the message box ui elements
+ */
 const MessageBox: React.FC<MessageProps> = (props) => {
   let senderId = "-1";
   let messageText = "";
