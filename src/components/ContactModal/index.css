@@ -1,0 +1,31 @@
+.dataLabel {
+    font-size: 1.2em !important;
+    font-style: Verdana;
+    font-weight: bold !important;
+    margin-left: 20px !important;
+}
+
+.smallImage {
+    width: 112.5px !important;
+    height: 112.5px !important;  
+    border-radius: 16px !important; 
+}
+
+div.smallImage {
+    box-shadow: none;
+    background-color: #d1d1d1;
+}
+
+.contactData {
+    font-size: 1.2em !important;
+    font-style: Verdana;
+    margin-left: 20px !important;
+}
+
+.contactView {
+    border-radius: 1rem !important;
+}
+
+.contactGrid {
+    flex-grow: 1;
+}

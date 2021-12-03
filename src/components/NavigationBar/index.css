@@ -1,0 +1,33 @@
+.navbar {
+    background-color: #e60b03f3 !important;
+}
+
+a.contact-list-link:link {
+    color: white !important;
+    text-decoration: none !important;
+  }
+  
+a.contact-list-link:visited {
+  color: white !important;
+  text-decoration: none !important;
+}
+  
+a.contact-list-link:hover {
+  color: rgb(31, 31, 31) !important;
+  text-decoration: none !important;
+}
+
+a.login-link:link {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+a.login-link:visited {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+a.login-link:hover {
+  color: rgb(31, 31, 31) !important;
+  text-decoration: none !important;
+}
